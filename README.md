@@ -1,3 +1,5 @@
+forked from https://gitlab.com/ian-s-mcb/smigle-hugo-theme
+
 # smigle-hugo-theme
 
 A minimalist theme for the static site generator [Hugo][hugo]. This
