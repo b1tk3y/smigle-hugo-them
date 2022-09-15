@@ -16,12 +16,11 @@
       <time>{{ .Lastmod.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time>
     </div>
   {{ end }}
-  {{ with .Params.tags }}
+  {{ if gt .Params.tags 0 }}
     <div>
       <span>Tags:</span>
-      {{ range $key, $value := . }}
-        {{- if $key }}, {{ end }}
-        <a href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}">{{ . }}</a>
+      {{ range .Params.tags }}
+        <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
       {{- end }}
     </div>
   {{ end }}
